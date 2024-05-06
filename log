@@ -25,3 +25,14 @@ treemap.c:53:13: error: variable ‘aux’ set but not used [-Werror=unused-but-
 cc1: all warnings being treated as errors
 Compilation failed
 9b09c5e
+Mon 06 May 2024 07:18:17 PM UTC: 
+ treemap.c | 10 ++++------
+ 1 file changed, 4 insertions(+), 6 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:53:13: error: variable ‘aux’ set but not used [-Werror=unused-but-set-variable]
+   53 |   TreeNode *aux = createTreeNode(key, value);
+      |             ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+ff62165
