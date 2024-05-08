@@ -91,12 +91,11 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
       tree->current = aux;
       return aux->pair->key;
     }
-    else if (aux->pair->key > key) {
+    else if (aux->pair->key >= key) {
       tree->current = aux;
       aux = aux->left;
-
     }
-    else if (aux->pair->key < key) {
+    else if (aux->pair->key =< key) {
       tree->current = aux;
       aux = aux->right;
     }
