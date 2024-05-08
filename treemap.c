@@ -87,15 +87,15 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
   TreeNode *aux = tree->root;
   
   while (aux != NULL) {
-    if (is_equal(tree, aux->pair->key, key) == 0) {
+    if (is_equal(tree, key, aux->pair->key) == 0) {
       tree->current = aux;
       return aux->pair->key;
     }
-    else if (is_equal(tree, aux->pair->key, key) < 0) {
+    else if (is_equal(tree,key, aux->pair->key) < 0) {
       aux = aux->left;
       tree->current = aux;
     }
-    else if (is_equal(tree, aux->pair->key, key) > 0) {
+    else if (is_equal(tree, key, aux->pair->key) > 0) {
       aux = aux->right;
       tree->current = aux;
     }
