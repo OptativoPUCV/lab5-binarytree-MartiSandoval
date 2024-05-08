@@ -91,13 +91,11 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
       tree->current = aux;
       return aux->pair;
     }
-    else if (is_equal(tree,key, aux->pair->key) < 0) {
+    else if (is_equal(tree, key, aux->pair->key) < 0) {
       aux = aux->left;
-      tree->current = aux;
     }
     else if (is_equal(tree, key, aux->pair->key) > 0) {
       aux = aux->right;
-      tree->current = aux;
     }
   }
   return NULL;
