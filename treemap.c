@@ -92,7 +92,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
       tree->current = aux;
       return aux->pair;
     }
-    else if (is_equal(tree, aux->pair->key, key) > 0) {
+    else if (is_equal(tree, aux->pair->key, key) < 0) {
       aux = aux->left;
     }
     else {
