@@ -52,35 +52,10 @@ TreeMap * createTreeMap(int (*lower_than) (void* key1, void* key2)) {
 
 void insertTreeMap(TreeMap * tree, void* key, void * value) {
   TreeNode *nodo = createTreeNode(key, value);
-  if(tree->root == NULL) {
-      tree->root = nodo;
-  } else {
-      TreeNode* temp = tree->root;
-      while(1) {
-        if(key < temp->pair->key) {
-          if(temp->left == NULL) {
-            temp->left = nodo;
-            break;
-          } 
-          else {
-            temp = temp->left;
-          }
-        } 
-        else if(key > temp->pair->key) {
-          if(temp->right == NULL) {
-            temp->right = nodo;
-            break;
-          } 
-          else {
-              temp = temp->right;
-          }
-        } 
-        else {  // Si la clave ya existe, actualizamos el dato
-          temp->pair->value = value;
-          free(nodo);  // Liberamos el nodo que ya no vamos a utilizar
-          break;
-          }
-      }
+  if (tree == NULL) {
+    tree->root = nodo;
+    tree->current = nodo;
+    return;
   }
   
   
