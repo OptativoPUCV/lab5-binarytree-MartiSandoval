@@ -187,7 +187,7 @@ Pair * nextTreeMap(TreeMap * tree) {
   } 
   else if(next->right == NULL) {
     TreeNode *temp = next;
-    while(next->parent) {
+    while(next->parent != NULL) {
       temp = next;
       next = next->parent;
       if(next->left == temp) {
