@@ -180,7 +180,7 @@ Pair * nextTreeMap(TreeMap * tree) {
     return NULL;
   
   TreeNode *next = tree->current;
-  if(next == tree->root || next->right) {
+  if(next == tree->root) {
     next = minimum(next->right);
     tree->current = next;
     return tree->current->pair;
