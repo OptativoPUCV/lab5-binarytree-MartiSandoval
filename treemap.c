@@ -164,7 +164,9 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
 
 
 Pair * upperBound(TreeMap * tree, void* key) {
-    return NULL;
+  if (searchTreeMap(tree, key) != NULL)
+    return tree->current->pair;
+  return nextTreeMap(tree);
 }
 
 Pair * firstTreeMap(TreeMap * tree) {
