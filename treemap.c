@@ -170,7 +170,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
   TreeNode *menor = NULL;
   while (aux != NULL) {
     if (tree->lower_than(key, aux->pair->key)) {
-      menor = aux;
+      menor = aux->parent;
       aux = aux->left;
     }
     else {
