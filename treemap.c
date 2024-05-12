@@ -26,7 +26,6 @@ int is_equal(TreeMap* tree, void* key1, void* key2){
   
 }
 
-
 TreeNode * createTreeNode(void* key, void * value) {
     TreeNode * new = (TreeNode *)malloc(sizeof(TreeNode));
     if (new == NULL) return NULL;
@@ -166,7 +165,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
 Pair * upperBound(TreeMap * tree, void* key) {
   if (searchTreeMap(tree, key) != NULL)
     return tree->current->pair;
-  return nextTreeMap(tree);
+  
 }
 
 Pair * firstTreeMap(TreeMap * tree) {
