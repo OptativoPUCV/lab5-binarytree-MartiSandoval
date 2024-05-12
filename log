@@ -400,3 +400,8 @@ treemap.c:173:7: error: ‘menor’ undeclared (first use in this function)
 treemap.c:173:7: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 112d73e
+Sun 12 May 2024 12:43:58 AM UTC: 
+ treemap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  0|0
+500226a
