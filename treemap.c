@@ -166,19 +166,16 @@ Pair * upperBound(TreeMap * tree, void* key) {
   if (searchTreeMap(tree, key) != NULL)
     return tree->current->pair;
   
-  TreeNode *aux = tree->root;
-  TreeNode *menor = NULL;
+  TreeNode *aux = minimum(tree->root);
+  //TreeNode *menor = NULL;
   while (aux != NULL) {
-    if (tree->lower_than(key, aux->pair->key)) {
-      menor = aux->parent;
-      aux = aux->left;
+    if (!tree->lower_than(key, aux->pair->key)) {
+      return aux->pair;
     }
-    else {
-      menor = aux->right;
-      aux = aux->right;
-    }
+    aux->pair = nextTreeMap(tree);
   }
-  return menor->pair;
+    
+  return aux->pair;
 }
 
 Pair * firstTreeMap(TreeMap * tree) {
