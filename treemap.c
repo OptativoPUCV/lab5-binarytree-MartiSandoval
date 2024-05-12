@@ -163,7 +163,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
 
 
 Pair * upperBound(TreeMap * tree, void* key) {
-  if (tree == NULL) return NULL;
+  /*if (tree == NULL) return NULL;
   if (searchTreeMap(tree, key) != NULL) return tree->current->pair;
 
   Pair *upper = firstTreeMap(tree);
@@ -172,7 +172,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
     upper = nextTreeMap(tree);
     current = upper;
   }
-  return current;
+  return current;*/
   
 }
 
