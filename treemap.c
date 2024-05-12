@@ -165,6 +165,15 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
 Pair * upperBound(TreeMap * tree, void* key) {
   if (searchTreeMap(tree, key) != NULL)
     return tree->current->pair;
+
+  TreeNode *menor = minimum(tree->root);
+  while (menor != NULL) {
+    if (!tree->lower_than(key, menor->pair->key)) {
+      return menor->pair->key;
+    }
+    menor->pair = nextTreeMap(tree);
+  }
+  
   return NULL;
 }
 
