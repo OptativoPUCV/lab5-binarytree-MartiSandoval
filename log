@@ -378,3 +378,14 @@ test.c:503:5: error: ‘main’ defined but not used [-Werror=unused-function]
 cc1: all warnings being treated as errors
 Compilation failed
 6b8c54b
+Sun 12 May 2024 12:43:36 AM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘upperBound’:
+treemap.c:170:13: error: variable ‘menor’ set but not used [-Werror=unused-but-set-variable]
+  170 |   TreeNode *menor = NULL;
+      |             ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+2355e67
