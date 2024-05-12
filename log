@@ -342,3 +342,17 @@ Sun 12 May 2024 12:41:11 AM UTC:
  tests:  23|2
 total_score: 45/70
 20a92a4
+Sun 12 May 2024 12:43:01 AM UTC: 
+ treemap.c | 13 +++++++------
+ 1 file changed, 7 insertions(+), 6 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘upperBound’:
+treemap.c:170:13: error: variable ‘menor’ set but not used [-Werror=unused-but-set-variable]
+  170 |   TreeNode *menor = NULL;
+      |             ^~~~~
+treemap.c:180:1: error: control reaches end of non-void function [-Werror=return-type]
+  180 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+7128473
